@@ -1,0 +1,17 @@
+{
+    "name": "BookXcess Online Goodreads Rating",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.bookxcessonline.com/collections/*/products/*", "https://*.bookxcessonline.com/products/*" ],
+            "run_at": "document_idle",
+            "js": ["contentScript.js"]
+        }
+    ],
+    "manifest_version": 2
+}
